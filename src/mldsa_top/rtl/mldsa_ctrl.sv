@@ -17,7 +17,7 @@
 //  Keygen
 //  Signing
 
-`include "config_defines.svh"
+`include "abr_config_defines.svh"
 
 module mldsa_ctrl
   import mldsa_reg_pkg::*;

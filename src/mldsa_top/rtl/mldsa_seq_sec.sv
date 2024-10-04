@@ -18,7 +18,7 @@
 //  Signing validity checks
 //  Signing signature generation
 
-`include "config_defines.svh"
+`include "abr_config_defines.svh"
 
 module mldsa_seq_sec
   import mldsa_ctrl_pkg::*;

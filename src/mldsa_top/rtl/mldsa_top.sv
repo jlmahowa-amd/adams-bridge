@@ -13,7 +13,7 @@
 // limitations under the License.
 
 //Initial top level module
-`include "config_defines.svh"
+`include "abr_config_defines.svh"
 `include "abr_prim_assert.sv"
 
 module mldsa_top

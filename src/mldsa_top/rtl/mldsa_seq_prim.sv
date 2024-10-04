@@ -18,8 +18,7 @@
 //  Signing - challenge generation
 //  Verify
 
-`include "config_defines.svh"
-
+`include "abr_config_defines.svh"
 module mldsa_seq_prim
   import mldsa_ctrl_pkg::*;
   (
