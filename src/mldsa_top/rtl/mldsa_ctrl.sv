@@ -736,9 +736,9 @@ module mldsa_ctrl
           MLDSA_RHO_P_KAPPA_ID: msg_data <= msg_done ? {48'b0,(kappa_reg + sampler_imm[2:0])} : rho_p_reg[sampler_src_offset[2:0]];
           MLDSA_SIG_C_REG_ID:   msg_data <= {signature_reg.enc.c[{sampler_src_offset[2:0],1'b1}], signature_reg.enc.c[{sampler_src_offset[2:0],1'b0}]};
           MLDSA_PK_REG_ID:      msg_data <= {publickey_reg.enc.rho[{sampler_src_offset[1:0],1'b1}],publickey_reg.raw[{sampler_src_offset[1:0],1'b0}]};
-          MLDSA_ENTROPY_ID:     msg_data_o[0] = lfsr_entropy_reg[sampler_src_offset[2:0]];
-          MLDSA_CNT_ID:         msg_data_o[0] = counter_reg;
-          default:              msg_data_o[0] = '0;
+          MLDSA_ENTROPY_ID:     msg_data <= lfsr_entropy_reg[sampler_src_offset[2:0]];
+          MLDSA_CNT_ID:         msg_data <= counter_reg;
+          default:              msg_data <= '0;
         endcase
       end
     end 
